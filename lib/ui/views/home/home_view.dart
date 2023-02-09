@@ -84,6 +84,7 @@ class _HomeView extends State<HomeView> {
                     inactiveBgColorList: [Colors.white],
                     activeTextColorList: [Colors.white],
                     inactiveTextColorList: [Theme.of(context).primaryColor],
+                    shouldWrap: true,
                     listOfChipIndicesCurrentlySeclected: [_currentIndex],
                     extraOnToggle: (val) {
                       _pokemonBloc.setPokemon = _pokemons[val];
