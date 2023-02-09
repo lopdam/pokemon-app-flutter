@@ -2,6 +2,15 @@
 
 Pokemon App
 
+# Screenshots
+
+![Screenshot 1](./github/1.png)
+![Screenshot 2](./github/2.png)
+![Screenshot 3](./github/3.png)
+![Screenshot 4](./github/4.png)
+![Screenshot 5](./github/5.png)
+![Screenshot 6](./github/6.png)
+
 ## Aplicación móvil en Flutter;
 
 Consumir el servicio desde https://pokeapi.co, para ello acceder a la documentación de la
@@ -18,7 +27,6 @@ Los elementos por mostrarse del item seleccionado son:
 • Velocidad en barra
 
 La barra debe mostrar hasta un máximo de 250 unidades.
-
 
 Para el selector de habilidades el usuario puede elegir hasta dos de las listadas a
 continuación
