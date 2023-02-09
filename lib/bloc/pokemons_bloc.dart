@@ -44,7 +44,7 @@ class PokemonsBloc {
     });
   }
 
-  disponse() {
+  dispose() {
     _pokemonsController.close();
     _pokemonController.close();
     _pokemonNameController.close();

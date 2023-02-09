@@ -32,7 +32,7 @@ class _HomeView extends State<HomeView> {
 
   @override
   void dispose() {
-    _pokemonBloc.disponse();
+    _pokemonBloc.dispose();
     super.dispose();
   }
 
@@ -176,19 +176,19 @@ class _HomeView extends State<HomeView> {
                         )),
                     AbilityIndicator(
                       ability: "Vida",
-                      value: _pokemon.hpCurrent,
+                      value: _pokemon.currentStats.hp,
                     ),
                     AbilityIndicator(
                       ability: "Ataque",
-                      value: _pokemon.attackCurrent,
+                      value: _pokemon.currentStats.attack,
                     ),
                     AbilityIndicator(
                       ability: "Defensa",
-                      value: _pokemon.defenseCurrent,
+                      value: _pokemon.currentStats.defense,
                     ),
                     AbilityIndicator(
                       ability: "Velocidad",
-                      value: _pokemon.speedCurrent,
+                      value: _pokemon.currentStats.speed,
                     )
                   ],
                 );
