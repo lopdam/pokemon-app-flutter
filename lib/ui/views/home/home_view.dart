@@ -88,6 +88,7 @@ class _HomeView extends State<HomeView> {
                     extraOnToggle: (val) {
                       _pokemonBloc.setPokemon = _pokemons[val];
                       setState(() {
+                        _currentAvilities.clear();
                         _currentIndex = val;
                       });
                     },
@@ -138,6 +139,8 @@ class _HomeView extends State<HomeView> {
                             });
                           }
                         }
+                        _pokemonBloc.updatePokemon =
+                            _pokemon.calculateAbilities(_currentAvilities);
                       },
                     ),
                     ..._currentAvilities
@@ -169,19 +172,19 @@ class _HomeView extends State<HomeView> {
                         )),
                     AbilityIndicator(
                       ability: "Vida",
-                      value: _pokemon.hp,
+                      value: _pokemon.hpCurrent,
                     ),
                     AbilityIndicator(
                       ability: "Ataque",
-                      value: _pokemon.attack,
+                      value: _pokemon.attackCurrent,
                     ),
                     AbilityIndicator(
                       ability: "Defensa",
-                      value: _pokemon.defense,
+                      value: _pokemon.defenseCurrent,
                     ),
                     AbilityIndicator(
                       ability: "Velocidad",
-                      value: _pokemon.speed,
+                      value: _pokemon.speedCurrent,
                     )
                   ],
                 );

@@ -45,7 +45,73 @@ class Pokemon {
     speedCurrent = speed;
   }
 
-  void calculateAbilities(List<int> selected) {}
+  Pokemon calculateAbilities(List<int> selected) {
+    hpCurrent = hp;
+    attackCurrent = attack;
+    defenseCurrent = defense;
+    speedCurrent = speed;
+
+    if (selected.contains(0)) {
+      _intimidation();
+    }
+    if (selected.contains(1)) {
+      _immunity();
+    }
+    if (selected.contains(2)) {
+      _power();
+    }
+    if (selected.contains(3)) {
+      _regeneration();
+    }
+    if (selected.contains(4)) {
+      _impassive();
+    }
+    if (selected.contains(5)) {
+      _toxic();
+    }
+    return this;
+  }
+
+  void _intimidation() {
+    attackCurrent += 10;
+    speedCurrent += 15;
+    hpCurrent -= 5;
+    defenseCurrent -= 10;
+  }
+
+  void _immunity() {
+    attackCurrent -= 20;
+    speedCurrent -= 10;
+    hpCurrent += 10;
+    defenseCurrent += 20;
+  }
+
+  void _power() {
+    attackCurrent += 15;
+    speedCurrent += 15;
+    hpCurrent -= 20;
+    defenseCurrent -= 10;
+  }
+
+  void _regeneration() {
+    attackCurrent -= 20;
+    speedCurrent += 5;
+    hpCurrent += 10;
+    defenseCurrent += 5;
+  }
+
+  void _impassive() {
+    attackCurrent -= 3;
+    speedCurrent += 30;
+    hpCurrent -= 10;
+    defenseCurrent -= 10;
+  }
+
+  void _toxic() {
+    speedCurrent -= 3;
+    hpCurrent -= 15;
+    defenseCurrent += 20;
+  }
 
   factory Pokemon.fromJson(Map<String, dynamic> json) {
     Map<String, dynamic>? jsonPhotos = json['sprites'];

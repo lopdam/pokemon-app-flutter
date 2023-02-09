@@ -24,7 +24,7 @@ class AbilityIndicator extends StatelessWidget {
             animation: true,
             lineHeight: 20.0,
             animationDuration: 2500,
-            percent: value / 100,
+            percent: getPercent(value),
             center: Text("$value"),
             barRadius: Radius.circular(100),
             progressColor: getColor(value),
@@ -32,6 +32,16 @@ class AbilityIndicator extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  double getPercent(int value) {
+    if (value <= 0) {
+      return 0;
+    } else if (value >= 100) {
+      return 1;
+    } else {
+      return value / 100;
+    }
   }
 
   Color getColor(int value) {
