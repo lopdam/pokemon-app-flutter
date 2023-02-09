@@ -2,6 +2,8 @@
 
 Pokemon App
 
+[Download App](./github/pokemon.apk)
+
 # Screenshots
 
 ![Screenshot 1](./github/1.png)
