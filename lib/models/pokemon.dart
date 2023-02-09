@@ -1,4 +1,5 @@
 import 'package:pokemon/models/stats.dart';
+import 'package:pokemon/utils/util.dart';
 
 class Pokemon {
   int? id;
@@ -44,36 +45,22 @@ class Pokemon {
 
     List<String> newPhotos = [];
 
-    if (jsonPhotos?["back_default"] != null) {
-      newPhotos.add(jsonPhotos?["back_default"]);
-    }
+    List<String> keysPhotos = [
+      "back_default",
+      "back_female",
+      "back_shiny",
+      "back_shiny_female",
+      "front_default",
+      "front_female",
+      "front_shiny",
+      "front_shiny",
+      "front_shiny_female"
+    ];
 
-    if (jsonPhotos?["back_female"] != null) {
-      newPhotos.add(jsonPhotos?["back_female"]);
-    }
-
-    if (jsonPhotos?["back_shiny"] != null) {
-      newPhotos.add(jsonPhotos?["back_shiny"]);
-    }
-
-    if (jsonPhotos?["back_shiny_female"] != null) {
-      newPhotos.add(jsonPhotos?["back_shiny_female"]);
-    }
-
-    if (jsonPhotos?["front_default"] != null) {
-      newPhotos.add(jsonPhotos?["front_default"]);
-    }
-
-    if (jsonPhotos?["front_female"] != null) {
-      newPhotos.add(jsonPhotos?["front_female"]);
-    }
-
-    if (jsonPhotos?["front_shiny"] != null) {
-      newPhotos.add(jsonPhotos?["front_shiny"]);
-    }
-
-    if (jsonPhotos?["front_shiny_female"] != null) {
-      newPhotos.add(jsonPhotos?["front_shiny_female"]);
+    for (String key in keysPhotos) {
+      if (!Util.isEmpty(jsonPhotos?[key])) {
+        newPhotos.add(jsonPhotos?[key]);
+      }
     }
 
     Stats newsStats = Stats.fromJson(json);
