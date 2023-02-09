@@ -11,7 +11,7 @@ Pokemon App
 ![Screenshot 5](./github/5.png)
 ![Screenshot 6](./github/6.png)
 
-## Aplicación móvil en Flutter;
+## Aplicación móvil en Flutter
 
 Consumir el servicio desde https://pokeapi.co, para ello acceder a la documentación de la
 página y utilizar el recurso de paginación para obtener una lista de 3 elementos
