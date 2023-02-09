@@ -1,6 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bayteq.pokemon">
-   <application
+
+    <!-- To acces to internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
         android:label="pokemon"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

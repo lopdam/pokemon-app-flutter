@@ -47,5 +47,6 @@ class PokemonsBloc {
   disponse() {
     _pokemonsController.close();
     _pokemonController.close();
+    _pokemonNameController.close();
   }
 }

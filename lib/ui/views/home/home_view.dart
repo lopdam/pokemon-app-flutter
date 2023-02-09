@@ -98,7 +98,10 @@ class _HomeView extends State<HomeView> {
                   return Container();
                 }
               } else {
-                return const Center(child: CircularProgressIndicator());
+                return Center(
+                    child: CircularProgressIndicator(
+                  color: Theme.of(context).primaryColor,
+                ));
               }
             }),
         const SizedBox(height: 8),
